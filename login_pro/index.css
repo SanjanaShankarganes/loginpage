@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100%;
+    width: 100vw;
+    background-color: #ffffff;
+    position: absolute;
+    overflow: hidden;
+}
+#page1{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 150px;
+}
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow:4px 4px 8px rgb(79, 79, 79),-4px -4px 8px rgb(79, 79, 79);
+                      
+    overflow: hidden;
+    margin: 0 20px;
+}
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+.container .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+.input-field input:is(:focus, :valid) ~ i{
+    color:#0fcbcb;
+}
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.form a.text{
+    color:#0fcbcb;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color:#0fcbcb;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.button input:hover{
+    background-color:#00ffff;
+    color: black;
+}
+.login-signup{
+    margin-top: 20px;
+}
+.bubbles{
+    display:flex;
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+}
+.bubbles span{
+    position:relative;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    background-color:rgb(11, 153, 196) ;
+    margin:0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rebeccapurple, 
+    0 0 50px rgb(0, 179, 255),
+    0 0 100px rgb(0, 179, 255);
+    animation: animate 15s linear infinite;
+     animation-duration:calc(125s/var(--i));
+}
+.bubbles span:nth-child(even){
+    background: red;
+    box-shadow:0 0 10px rebeccapurple, 
+    0 0 50px red,
+    0 0 100px red;
+}
+@keyframes animate
+{
+0%
+{
+    transform:translateY(100vh) scale(0.3);
+}
+100%{
+    transform: translateY(-10vh) scale(0.8);
+}
+}
